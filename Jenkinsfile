@@ -2,9 +2,9 @@ pipeline {
     agent any  // Use the 'any' agent, similar to the working App Engine pipeline
 
     environment {
-        PROJECT_ID = 'rock-position-455809-m2'  // GCP Project ID
+        PROJECT_ID = 'devops-practice-474016'  // GCP Project ID
         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account')  // Service account credentials
-        DOCKER_HUB_CREDENTIALS_USR = 'aneilrapole'  // Your Docker Hub username
+        DOCKER_HUB_CREDENTIALS_USR = 'muktha14'  // Your Docker Hub username
         IMAGE_NAME = 'cloudrun'  // Docker image name
         DOCKER_HUB_CREDENTIALS_PSWD = credentials('docker-hub-password')  // Docker Hub password credentials
     }
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/AneilRapole/cloud-run-practice.git'
+                git branch: 'main', url: 'https://github.com/vengotimuktha/cloudrun-jenkines.git'
             }
         }
 
